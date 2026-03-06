@@ -1,0 +1,23 @@
+//把cin的存放到vector里,但是按回车输入并不会结束
+vector<string> v;
+string s;
+
+while(cin >> s)
+    v.push_back(s);
+
+
+//先确定输入个数，按下回车输入结束，程序不会一直等待
+int n;
+cin >> n;
+
+vector<string> strs(n);
+
+for(int i = 0; i < n; i++){
+    cin >> strs[i];
+}
+
+
+
+//从输入获取字符串
+string s;
+getline(cin,s);

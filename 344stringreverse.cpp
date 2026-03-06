@@ -49,6 +49,19 @@ int main(){
     }
     //string是一个类，但是其内部是用字符数组实现的
     //这里i = s.length()-1，是从最后一个字符开始
+
+
+
+    //手写双指针，两端交换，向中间移动，这里将内存中的也交换了，上述方法有的只交换了输出内存没变
+    void reverseString(vector(char)& s){
+        int left = 0;
+        int right = s.size()-1;
+        while(left<right){
+            swap(s[left],s[right]);
+            left++；
+            right--；
+        }
+    }
     return 0;
 
 }

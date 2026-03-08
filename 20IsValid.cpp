@@ -86,7 +86,7 @@ public:
         stack<char> st;
 
         unordered_map<char,char> mp={    //c++中的map需要导入map库，这里是哈希表版本的map
-            {')','('},                   //定义方式：map<key类型, value类型> 名字;二者相互对应
+            {')','('},                   //定义方式：map<key类型, value类型> 名字;二者相互对应，是有方向的
             {']','['},                   //value = mp[key]
             {'}','{'}
         };

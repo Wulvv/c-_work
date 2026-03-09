@@ -1,3 +1,10 @@
+//整数->字符串   to_string()
+//字符串->整数   stoi()
+//数字->字符    +'0'     int x = c - '0';
+//字符->数字    -'0'     int x = c - '0';
+
+
+
 //把cin的存放到vector里,但是按回车输入并不会结束
 vector<string> v;
 string s;
@@ -39,3 +46,58 @@ for(char c:s) count[c]++;
 for(int i=0;i<s.size();i++)
     if(count[s[i]]==1)
         return i;
+
+
+
+
+//进制转换
+//十进制->k进制   除基取余法最后逆序
+string toBase(int n,int k){
+
+    string table = "0123456789ABCDEF";
+    string res = "";
+
+    while(n){
+        res += table[n%k];
+        n/=k;       //记得更改k值
+    }
+
+    reverse(res.begin(),res.end());
+
+    return res;
+}
+//k进制->十进制    按位权展开
+int to10(string s,int k){
+
+    int res = 0;
+
+    for(char c:s){
+        int val = c-'0';
+        res = res*k + val;
+    }
+
+    return res;
+}
+//要先判零，有负数的话最后加上-
+class Solution {
+public:
+    string convertToBase7(int num) {
+        string table = "0123456789abcdef";
+        string res = "";
+        string flag = "";
+        if(num==0) return "0";
+        if(num<0){
+            flag="-";
+            num = -num;
+        }
+        while(num){
+            res+=table[num%7];
+            num/=7;
+        }
+        reverse(res.begin(),res.end());
+        return flag+res;
+        }
+    };
+
+
+

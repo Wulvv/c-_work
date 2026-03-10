@@ -25,7 +25,7 @@ int main(){
     for(int i = 0 ;i<first.size();i++){
         for(int j = 1;j<strs.size();j++){
             if(i>=strs[j].size()||strs[j][i]!=first[i]){
-                cout<<first.substr(0,i);
+                cout<<first.substr(0,i);       //只会输出字符串下标0~i-1的字符串，从0开始，长度为i的字符串
                 return 0;
             }
         }
@@ -70,3 +70,14 @@ strs[j][i]
 
 先判断长度
 再访问字符 */
+
+
+
+//方法二：先对字符串数组排序再找最长前缀
+        sort(strs.begin(),strs.end());
+        int length = min(strs[0].size(),strs[strs.size()-1].size());
+        for(int i = 0;i<length;i++){
+            if(strs[0][i] != strs[strs.size()-1][i]){
+                return strs[0].substr(0,i);
+            }
+        }

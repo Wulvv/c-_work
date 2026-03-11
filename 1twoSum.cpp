@@ -23,7 +23,7 @@ public:
 
             int need = target - nums[i];
 
-            if(mp.count(need)){
+            if(mp.count(need)){          //mp.count(c)作用是c的映射在哈希表中是否存在
                 return {mp[need], i};    //mp[]返回的是下标
             }
 

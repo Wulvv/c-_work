@@ -7,6 +7,12 @@
 
 
 
+//空格自动分割，赋给不同变量
+int y,m,d;
+cin>>y>>m>>d; 
+
+
+
 //把cin的存放到vector里,但是按回车输入并不会结束
 vector<string> v;
 string s;

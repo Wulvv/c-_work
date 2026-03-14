@@ -12,8 +12,8 @@ int main(){
     }
     for(int i = 0;i<t;i++){
         if(arr[i][0] == 0||arr[i][3] == 0||(arr[i][0] == 0&&arr[i][3] == 0)){
-            cout<<abs(arr[i][1]*arr[i][2]/2)<<endl;
-        }else{
+            cout<<abs(arr[i][1]*arr[i][2]/2)<<endl;                            //面积要返回绝对值！！！
+        }else{                                                                 //做题带脑子行不行啊
             cout<<abs(arr[i][0]*arr[i][3]/2)<<endl;
         }
     }

@@ -5,7 +5,8 @@
 //字母->数字                int index = c - 'a';
 //数字->字母                char c = index + 'a';
 
-
+//输出小数点后两位小数
+printf("%.2f", x);
 
 //空格自动分割，赋给不同变量
 int y,m,d;

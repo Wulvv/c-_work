@@ -36,7 +36,7 @@ using namespace std;
 struct stu{                                 //定义学生类型stu结构体
     int sno;
     int grade;
-};
+};                                          //结构体后要加;
 bool cmp(stu a,stu b){
     if(a.grade != b.grade){                //第一关键字不同
         return a.grade<b.grade;            //第一关键字规则

@@ -37,9 +37,13 @@ public:
         while (right < n) {
             if (nums[right]) {
                 swap(nums[left], nums[right]);
-                left++;
+                left++;                                         //left指向非零数，移动到下一个位置
             }
             right++;
         }
     }
 };
+
+/* [0, left-1] → 全是非零
+[left, right-1] → 全是0
+[right, end] → 未处理 */

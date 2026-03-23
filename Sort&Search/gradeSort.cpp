@@ -33,7 +33,7 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
-struct stu{                                 //定义学生类型stu结构体
+struct stu{                                 //定义学生类型stu结构体      这里的结构体定义不能用data，因为data是C++17中的保留字
     int sno;
     int grade;
 };                                          //结构体后要加;

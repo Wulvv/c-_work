@@ -98,10 +98,10 @@ public:
                 st.push(c);
             }
 
-            // 右括号
+            // 右括号，可能为空，可能不匹配，可能匹配pop出
             else{
 
-                if(st.empty()) return false;
+                if(st.empty()) return false;              
 
                 if(st.top()!=mp[c]) return false;       //map访问方式mp['(']
 
@@ -109,6 +109,6 @@ public:
             }
         }
 
-        return st.empty();
+        return st.empty();//根据最后st是否空判断合法
     }
 };

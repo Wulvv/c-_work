@@ -74,7 +74,7 @@ strs[j][i]
 
 
 //方法二：先对字符串数组排序再找最长前缀
-        sort(strs.begin(),strs.end());
+        sort(strs.begin(),strs.end());                                        //字符串数组也能排序！！！
         int length = min(strs[0].size(),strs[strs.size()-1].size());
         for(int i = 0;i<length;i++){
             if(strs[0][i] != strs[strs.size()-1][i]){

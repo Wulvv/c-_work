@@ -1,7 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        unordered_map<char,int> mp={   //哈希表定义unordered_map
+        unordered_map<char,int> mp={   //哈希表定义unordered_map，注意初始化要跟上数据类型
             {'I',1},
             {'V',5},
             {'X',10},
